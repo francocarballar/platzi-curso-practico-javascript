@@ -26,3 +26,19 @@ console.log("El perímetro del triángulo mide: " + perimetroTriangulo + " cm");
 const areaTriangulo = (ladoTriangulo3 * alturaTriangulo) / 2;
 console.log("El área del triángulo mide: " + areaTriangulo + " cm2");
 console.groupEnd();
+
+
+// Código del cuadrado
+
+console.group("Circulo");
+const radioCirculo = 4;
+const diametroCirculo = radioCirculo * 2;
+const PI = Math.PI;
+console.log("El radio del círculo mide: " + radioCirculo + " cm");
+
+const perimetroCirculo = diametroCirculo * PI;
+console.log("El perímetro del círculo mide: " + perimetroCirculo + " cm");
+
+const areaCirculo = (radioCirculo * radioCirculo) * PI;
+console.log("El área del circulo mide: " + areaCirculo + " cm2");
+console.groupEnd();
