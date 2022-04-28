@@ -41,47 +41,47 @@ document.addEventListener('mouseover', (e) => {
         if(mouseover === card1 || mouseover === card1__div || mouseover === card1__h4 || mouseover === card1__h2 || mouseover === card1__p || mouseover === card1__img) {
             card1.style = "background-color: var(--primary-color); border: none; width: 600px; height: 30vh;";
             card1__img.style = "filter: invert(0)";
-            card2.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card2.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card2__img.style = "filter: invert(1)";
-            card3.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card3.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card3__img.style = "filter: invert(1);";
-            card4.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card4.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card4__img.style = "filter: invert(1);";
         } else if(mouseover === card2 || mouseover === card2__div  || mouseover === card2__h4 || mouseover === card2__h2 || mouseover === card2__p ||  mouseover === card2__img) {
             card2.style = "background-color: var(--primary-color); border: none; width: 600px; height: 30vh;";
             card2__img.style = "filter: invert(0)";
-            card1.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card1.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card1__img.style = "filter: invert(1)";
-            card3.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card3.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card3__img.style = "filter: invert(1);";
-            card4.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card4.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card4__img.style = "filter: invert(1);";
         } else if(mouseover === card3 || mouseover === card3__div  || mouseover === card3__h4 || mouseover === card3__h2 || mouseover === card3__p ||  mouseover === card3__img) {
             card3.style = "background-color: var(--primary-color); border: none; width: 600px; height: 30vh;";
             card3__img.style = "filter: invert(0)";
-            card1.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card1.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card1__img.style = "filter: invert(1)";
-            card2.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card2.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card2__img.style = "filter: invert(1);";
-            card4.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card4.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card4__img.style = "filter: invert(1);";
         } else if(mouseover === card4 || mouseover === card4__div  || mouseover === card4__h4 || mouseover === card4__h2 || mouseover === card4__p ||  mouseover === card4__img) {
             card4.style = "background-color: var(--primary-color); border: none; width: 600px; height: 30vh;";
             card4__img.style = "filter: invert(0)";
-            card1.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card1.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card1__img.style = "filter: invert(1)";
-            card2.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card2.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card2__img.style = "filter: invert(1);";
-            card3.style = "background-color: var(--secondary-color); color: #FFFFFF; width: 500px; height: 25vh;";
+            card3.style = "background-color: var(--secondary-color); color: #FFFFFF; border-left: 5px solid var(--secondary-color); width: 500px; height: 25vh;";
             card3__img.style = "filter: invert(1);";
         } else {
-            card1.style = "background-color: var(--primary-color); width: 500px; height: 25vh;";
+            card1.style = "background-color: var(--primary-color); width: 500px; border-left: 5px solid var(--secondary-color); height: 25vh;";
             card1__img.style = "filter: invert(0)";
-            card2.style = "background-color: var(--primary-color); width: 500px; height: 25vh;";
+            card2.style = "background-color: var(--primary-color); width: 500px; border-left: 5px solid var(--secondary-color); height: 25vh;";
             card2__img.style = "filter: invert(0)";
-            card3.style = "background-color: var(--primary-color); width: 500px; height: 25vh;";
+            card3.style = "background-color: var(--primary-color); width: 500px; border-left: 5px solid var(--secondary-color); height: 25vh;";
             card3__img.style = "filter: invert(0)";
-            card4.style = "background-color: var(--primary-color); width: 500px; height: 25vh;";
+            card4.style = "background-color: var(--primary-color); width: 500px; border-left: 5px solid var(--secondary-color); height: 25vh;";
             card4__img.style = "filter: invert(0)";
         }
     } else {
