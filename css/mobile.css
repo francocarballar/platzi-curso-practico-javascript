@@ -92,6 +92,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 30px;
     padding-top: 25px;
 }
+.main
+section
+p {
+    margin: 10px 0;
+    font-size: var(--subtitle-mobile);
+}
+.main
+section
+ul {
+    margin-bottom: 35px;
+    font-size: var(--font-size-mobile);
+    list-style: none;
+}
 .main 
 .home-btn {
     display: none;
@@ -309,8 +322,6 @@ form
     height: 130px;
     background-color: var(--primary-color);
     border-top: 5px solid var(--secondary-color);
-    border-right: 5px solid var(--secondary-color);
-    border-left: 5px solid var(--secondary-color);
     transition: all 0.3s;
     cursor: pointer;
 }
