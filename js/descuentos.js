@@ -72,12 +72,6 @@ function calcularPrecioFinal(){
         errorDescuento.innerHTML = 'Ingrese un valor válido para hacer el descuento';
     } else {
         calcularPrecioConDescuento(precio, descuento, cupon);
-        inputPrecio.value = '';
-        inputDescuento.value = '';
-        inputCupon.value = '';
-        errorPrecio.innerHTML = '';
-        errorDescuento.innerHTML = '';
-        errorCupon.innerHTML = '';
     }
 }
 
