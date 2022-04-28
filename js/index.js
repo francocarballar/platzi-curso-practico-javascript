@@ -27,11 +27,11 @@ const card4__h2 = document.querySelector('#card4 h2');
 const card4__p = document.querySelector('#card4 p');
 const card4__img = document.querySelector('#card4 img');
 if (window.innerWidth >= 1024) {
-    navWorks.style = "flex-direction: column; align-items: flex-end; width: 500px; top: 0; right: 0;";
-    card1.style = "width: 500px; height: 25vh;";
-    card2.style = "width: 500px; height: 25vh;";
-    card3.style = "width: 500px; height: 25vh;";
-    card4.style = "width: 500px; height: 25vh;";
+    navWorks.style = "flex-direction: column; align-items: flex-end; width: 510px; top: 0; right: 0;";
+    card1.style = "width: 500px; height: 25vh; border-left: 5px solid var(--secondary-color);";
+    card2.style = "width: 500px; height: 25vh; border-left: 5px solid var(--secondary-color);";
+    card3.style = "width: 500px; height: 25vh; border-left: 5px solid var(--secondary-color);";
+    card4.style = "width: 500px; height: 25vh; border-left: 5px solid var(--secondary-color);";
     footer.style = "top: 100vh; height: 25vh;";
 }
 document.addEventListener('mouseover', (e) => {
