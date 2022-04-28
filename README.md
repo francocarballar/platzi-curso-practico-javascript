@@ -9,7 +9,7 @@ https://francocarballar.github.io/platzi-curso-practico-javascript
 ## Diseño:
 
 Mi diseño está inspirado en el diseño de [@lucasfrezzini](https://github.com/lucasfrezzini)
-## Taller #1: fuguras geométricas:
+## Taller #1: figuras geométricas:
 
 - Primer paso: definir las fórmulas
 - Segundo paso: implementar las fórmulas en JavaScript
