@@ -15,6 +15,10 @@
     margin: 0;
     padding: 0;
 }
+*::selection {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
 html {
     font-size: 62.5%;
 }
@@ -300,9 +304,9 @@ form
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 15px 10px;
+    padding: 25px 10px;
     width: 100vw;
-    height: auto;
+    height: 130px;
     background-color: var(--primary-color);
     border-top: 5px solid var(--secondary-color);
     border-right: 5px solid var(--secondary-color);

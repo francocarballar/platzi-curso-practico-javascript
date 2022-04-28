@@ -52,6 +52,23 @@ div {
     display: block;
 }
 .main
+.information-container {
+    width: calc(100vw - 600px);
+}
+.main
+section
+p {
+    margin: 10px 0;
+    font-size: var(--subtitle-mobile);
+}
+.main
+section
+ul {
+    margin-bottom: 35px;
+    font-size: var(--font-size-desktop);
+    list-style: none;
+}
+.main
 .main-section {
     display: grid;
     justify-content: center;
@@ -116,7 +133,7 @@ form
     position: fixed;
     bottom: 0;
     right: 0;
-    width: calc(100vw - 115px);
+    width: calc(100vw - 100px);
 }
 .main
 .nav-works
