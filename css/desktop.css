@@ -107,6 +107,11 @@ h2 {
 }
 .main
 .taller-card
+.subtitle-cupones {
+    margin-top: 125px;
+}
+.main
+.taller-card
 form
 label {
     font-size: var(--font-size-desktop);
@@ -124,11 +129,41 @@ form
     font-size: var(--font-size-desktop);
 }
 .main
+.overlay
+.result {
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+    width: 600px;
+    height: 400px;
+}
+.main
+.overlay
+.result
+.result-close {
+    font-size: var(--title-desktop);
+}
+.main
+.overlay
+.result
+#resultIMG {
+    width: 100px;
+    height: 100px;
+}
+.main
+.overlay
+.result
+#resultH2 {
+    font-size: var(--title-desktop);
+}
+.main
+.overlay
+.result
+#resultH4 {
+    font-size: var(--subtitle-desktop);
+}
+.main
 .nav-works {
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin-top: 0;
     position: fixed;
     bottom: 0;
@@ -141,6 +176,31 @@ form
     width: 100%;
     height: 125px;
     border-right: 5px solid var(--secondary-color);
+}
+.main
+.nav-works
+.card__item
+img {
+    width: 75px;
+    height: 75px;
+}
+.main
+.nav-works
+.card__item
+h4 {
+    display: none;
+}
+.main
+.nav-works
+.card__item
+h2 {
+    font-size: var(--title-mobile);
+}
+.main
+.nav-works
+.card__item
+p {
+    display: none;
 }
 
 /* Estilos del pié de página */

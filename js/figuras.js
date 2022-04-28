@@ -19,6 +19,7 @@ function areaCuadrado (lado) {
     return lado * lado;
 } 
 
+const error = [...document.querySelectorAll('.error')];
 const inputCuadrado = document.getElementById('inputCuadrado');
 const errorCuadrado = document.getElementById('error-cuadrado')
 function calcularPerimetroCuadrado(){
@@ -32,6 +33,7 @@ function calcularPerimetroCuadrado(){
     inputCuadrado.value = '';
     errorCuadrado.innerHTML = ''
     if (lado === 0) {
+        error[0].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorCuadrado.innerHTML = 'Ingrese un valor válido para el lado';
@@ -46,14 +48,16 @@ function calcularAreaCuadrado() {
     body.style = 'overflow: hidden';
     resultIMG.src = './assets/icons/square.png';
     resultH2.innerHTML = 'Cuadrado';
-    resultH4.innerHTML = 'El área del cuadrado es ' + area + ' cm';
+    resultH4.innerHTML = 'El área del cuadrado es ' + area + ' cm²';
     inputCuadrado.value = '';
     errorCuadrado.innerHTML = ''
     if (lado === 0) {
+        error[0].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorCuadrado.innerHTML = 'Ingrese un valor válido para el lado';
     } else {
+        error[0].style = 'display: none';
         errorCuadrado.innerHTML = '';
     }
 }
@@ -80,18 +84,23 @@ function calcularPerimetroRectangulo(){
     resultIMG.src = './assets/icons/cube.png';
     resultH2.innerHTML = 'Rectángulo';
     resultH4.innerHTML = 'El perímetro del rectángulo es ' + perimetro + ' cm';
-    inputCuadrado.value = '';
+    inputRectangulo1.value = '';
+    inputRectangulo2.value = '';
     errorRectanguloLado1.innerHTML = '';
     errorRectanguloLado2.innerHTML = '';
     if (lado1 === 0) {
+        error[1].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorRectanguloLado1.innerHTML = 'Ingrese un valor válido para el Lado A';
     } else if (lado2 === 0) {
+        error[2].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorRectanguloLado2.innerHTML = 'Ingrese un valor válido para el Lado B';
     } else {
+        error[1].style = 'display: none';
+        error[2].style = 'display: none';
         errorRectanguloLado1.innerHTML = '';
         errorRectanguloLado2.innerHTML = '';
     }
@@ -104,19 +113,24 @@ function calcularAreaRectangulo() {
     body.style = 'overflow: hidden';
     resultIMG.src = './assets/icons/cube.png';
     resultH2.innerHTML = 'Rectángulo';
-    resultH4.innerHTML = 'El área del rectángulo es ' + area + ' cm';
-    inputCuadrado.value = '';
+    resultH4.innerHTML = 'El área del rectángulo es ' + area + ' cm²';
+    inputRectangulo1.value = '';
+    inputRectangulo2.value = '';
     errorRectanguloLado1.innerHTML = '';
     errorRectanguloLado2.innerHTML = '';
     if (lado1 === 0) {
+        error[1].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorRectanguloLado1.innerHTML = 'Ingrese un valor válido para el Lado A';
     } else if (lado2 === 0) {
+        error[2].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorRectanguloLado2.innerHTML = 'Ingrese un valor válido para el Lado B';
     } else {
+        error[1].style = 'display: none';
+        error[2].style = 'display: none';
         errorRectanguloLado1.innerHTML = '';
         errorRectanguloLado2.innerHTML = '';
     }
@@ -158,22 +172,30 @@ function calcularPerimetroTriangulo(){
     errorTranguloBase.innerHTML = '';
     errorTranguloAltura.innerHTML = '';
     if (lado1 === 0) {
+        error[3].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorTranguloLado1.innerHTML = 'Ingrese un valor válido para el Lado A';
     } else if(lado2 === 0){
+        error[4].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorTranguloLado2.innerHTML = 'Ingrese un valor válido para el Lado B';
     } else if(base === 0){
+        error[5].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorTranguloBase.innerHTML = 'Ingrese un valor válido para la base';
     } else if(altura === 0){
+        error[6].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorTranguloAltura.innerHTML = 'Ingrese un valor válido para la altura';
     } else {
+        error[3].style = 'display: none';
+        error[4].style = 'display: none';
+        error[5].style = 'display: none';
+        error[6].style = 'display: none';
         errorTranguloLado1.innerHTML = '';
         errorTranguloLado2.innerHTML = '';
         errorTranguloBase.innerHTML = '';
@@ -188,7 +210,7 @@ function calcularAreaTriangulo() {
     body.style = 'overflow: hidden';
     resultIMG.src = './assets/icons/triangle.png';
     resultH2.innerHTML = 'Triángulo';
-    resultH4.innerHTML = 'El área del triángulo es ' + area + ' cm';
+    resultH4.innerHTML = 'El área del triángulo es ' + area + ' cm²';
     inputTriangulo1.value = '';
     inputTriangulo2.value = '';
     inputBase.value = '';
@@ -198,14 +220,20 @@ function calcularAreaTriangulo() {
     errorTranguloBase.innerHTML = '';
     errorTranguloAltura.innerHTML = '';
     if(base === 0){
+        error[5].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorTranguloBase.innerHTML = 'Ingrese un valor válido para la base';
     } else if(altura === 0){
+        error[6].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorTranguloAltura.innerHTML = 'Ingrese un valor válido para la altura';
     } else {
+        error[3].style = 'display: none';
+        error[4].style = 'display: none';
+        error[5].style = 'display: none';
+        error[6].style = 'display: none';
         errorTranguloLado1.innerHTML = '';
         errorTranguloLado2.innerHTML = '';
         errorTranguloBase.innerHTML = '';
@@ -240,10 +268,12 @@ function calcularPerimetroCirculo(){
     inputCirculo.value = '';
     errorCirculo.innerHTML = '';
     if(radio === 0){
+        error[7].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorCirculo.innerHTML = 'Ingrese un valor válido para el radio';
     } else {
+        error[7].style = 'display: none';
         errorCirculo.innerHTML = '';
     }
 }
@@ -254,14 +284,16 @@ function calcularAreaCirculo() {
     body.style = 'overflow: hidden';
     resultIMG.src = './assets/icons/circle.png';
     resultH2.innerHTML = 'Círculo';
-    resultH4.innerHTML = 'El área del círculo es ' + area + ' cm';
+    resultH4.innerHTML = 'El área del círculo es ' + area + ' cm²';
     inputCirculo.value = '';
     errorCirculo.innerHTML = '';
     if(radio === 0){
+        error[7].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorCirculo.innerHTML = 'Ingrese un valor válido para el radio';
     } else {
+        error[7].style = 'display: none';
         errorCirculo.innerHTML = '';
     }
 }
@@ -276,10 +308,12 @@ function calcularDiametroCirculo() {
     inputCirculo.value = '';
     errorCirculo.innerHTML = '';
     if(radio === 0){
+        error[7].style = 'display: block';
         overlay.style = 'display: none';
         body.style = 'overflow-y: scroll; overflow-x: hidden;';
         errorCirculo.innerHTML = 'Ingrese un valor válido para el radio';
     } else {
+        error[7].style = 'display: none';
         errorCirculo.innerHTML = '';
     }
 }

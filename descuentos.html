@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/mobile.css">
     <link rel="stylesheet" type="text/css" href="./css/desktop.css" media="(min-width: 1024px")>
-    <link rel="shortcut icon" href="./assets/img/js-challenge-logo.png" type="image/x-icon">
-    <title>Inicio | Curso Práctico de Javascript en Platzi</title> 
+    <link rel="shortcut icon" href="./assets/icons/descuentos.png" type="image/x-icon">
+    <title>Descuentos y Porcentajes | Curso Práctico de Javascript en Platzi</title> 
 </head>
 <body>
     <header class="header">
@@ -27,31 +27,36 @@
         </nav>
     </header>
     <main class="main">
-        <section class="information-container">
-            <header>
-                <h3>TRABAJO PRÁCTICO - PLATZI</h3>
-                <h1>Curso Práctico de JavaScript</h1>
-            </header>
-            <p>
-                <strong> Temas vistos en el curso:</strong>
-                
-            </p>
-            <ul>
-                <li>Manipulación del DOM</li>
-                <li>Manipulación de Array</li>
-                <li>Functions</li>
-                <li>HTML y CSS</li>
-                <li>Animaciones y transiciones</li>
-            </ul>
-            <p>
-                <strong> Cursos relacionados:</strong>
-            </p>
-            <ul>
-                <li>Curso de Frontend - @teffcode</li>
-                <li>Curso Básico de JavaScript - @degranda10</li>
-                <li>Curso Práctico de JavaScript - @juandc</li>
-            </ul>
-            <p><strong> Utilizá los talleres para hacer tus cálculos</strong></p>
+        <a class="home-btn" href="./index.html">HOME</a>
+        <header>
+            <h3>TRABAJO PRÁCTICO - PLATZI</h3>
+            <h1>Descuentos y porcentajes</h1>
+        </header>
+        <section class="main-section">
+            <section class="taller-card">
+                <img src="assets/icons/price.png" alt="Imágen de una etiqueta con descuento" class="img-first">
+                <h2>Cálculos</h2>
+                <form id="form-descuentos">
+                    <label for="precio">Escibe el <strong> precio</strong> de tu producto</label>
+                    <input type="number" name="precio" id="inputPrecio" min="1">
+                    <p id="error-precio" class="error"></p>
+                    <label for="descuento">Escibe el <strong> descuento</strong> de tu producto</label>
+                    <input type="number" name="descuento" id="inputDescuento" min="1">
+                    <p id="error-descuento" class="error"></p>
+                    <label for="cupon">Escibe el <strong> cúpon</strong>, si tienes</label>
+                    <input type="text" name="cupon" id="inputCupon" autocomplete>
+                    <p id="error-cupon" class="error"></p>
+                    <button class="btn-form btn-form-first" type="button" onclick="calcularPrecioFinal();">Cálcular precio con descuento</button>
+                </form>
+            </section>
+            <section class="taller-card">
+                <h2 class="subtitle-cupones">Lista de Cupones disponibles</h2>
+                <ul>
+                    <li>Promo10</li>
+                    <li>Promo20</li>
+                    <li>Promo30</li>
+                </ul>
+            </section>
         </section>
         <!-- Nav Works  -->
         <section class="nav-works">
@@ -62,15 +67,7 @@
                         <h4>TALLER #1</h4>
                         <h2>Figuras Geométricas</h2>
                     </header>
-                    <p>Cálculos básicos para Cuadrados, Rectángulos, Triangulos y Círculos.</p>
-                </div>
-            </div>
-            <div class="card__item" id="card2" onclick="location.href='./descuentos.html'">
-                <img src="assets/icons/price.png" alt="">
-                <div>
-                    <h4>TALLER #2</h4>
-                    <h2>Porcentajes y descuentos</h2>
-                    <p>Cálculos básicos para precios, descuentos y cupones de pago.</p>
+                    <p>Cálculo básicos para Cuadrados, Rectángulos, Triangulos y Círculos.</p>
                 </div>
             </div>
             <div class="card__item" id="card3" onclick="location.href='./taller-3.html'">
@@ -88,6 +85,17 @@
                     <h2>Analisis Salarial</h2>
                     <p>Cálculos básicos para trabajar con Salarios (medianas y top 10%).</p>
                 </div>
+            </div>
+        </section>
+        <!-- Overlay Results  -->
+        <section class="overlay" id="overlay">
+            <div class="result" id="result">
+                <p>
+                    <span class="result-close" onclick="closeOverlay()">x</span>
+                </p>
+                <img id="resultIMG" alt="Imágen de el resultado del cálculo con la figura geométrica">
+                <h2 id="resultH2"></h2>
+                <h4 id="resultH4"></h4>
             </div>
         </section>
     </main>
@@ -112,6 +120,6 @@
             </ul>
         </nav>
     </footer>
-    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="./js/descuentos.js"></script>
 </body>
 </html>
