@@ -36,7 +36,6 @@ if (window.innerWidth >= 1024) {
 }
 document.addEventListener('mouseover', (e) => {
     const mouseover = e.target;
-    console.log(mouseover);
     if (window.innerWidth >= 1024) {
         if(mouseover === card1 || mouseover === card1__div || mouseover === card1__h4 || mouseover === card1__h2 || mouseover === card1__p || mouseover === card1__img) {
             card1.style = "background-color: var(--primary-color); border: none; width: 600px; height: 30vh;";
