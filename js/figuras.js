@@ -287,19 +287,28 @@ function calcularDiametroCirculo() {
 // Función hover en las tarjetas
 
 const card1 = document.getElementById('card1');
+const card1__h4 = document.querySelector('#card1 h4');
+const card1__h2 = document.querySelector('#card1 h2');
+const card1__img = document.querySelector('#card1 img');
 const card2 = document.getElementById('card2');
+const card2__h4 = document.querySelector('#card2 h4');
+const card2__h2 = document.querySelector('#card2 h2');
+const card2__img = document.querySelector('#card2 img');
 const card3 = document.getElementById('card3');
+const card3__h4 = document.querySelector('#card3 h4');
+const card3__h2 = document.querySelector('#card3 h2');
+const card3__img = document.querySelector('#card3 img');
 document.addEventListener('mouseover', (e) => {
     const mouseover = e.target;
-    if(mouseover === card1) {
+    if(mouseover === card1 || mouseover === card1__h4 || mouseover === card1__h2 || mouseover === card1__img) {
         card1.style = "background-color: var(--primary-color); border: none;";
         card2.style = "background-color: var(--secondary-color); color: #FFFFFF;";
         card3.style = "background-color: var(--secondary-color); color: #FFFFFF;";
-    } else if(mouseover === card2) {
+    } else if(mouseover === card2 || mouseover === card2__h4 || mouseover === card2__h2 || mouseover === card2__img) {
         card1.style = "background-color: var(--secondary-color); color: #FFFFFF;";
         card2.style = "background-color: var(--primary-color); border: none;";
         card3.style = "background-color: var(--secondary-color); color: #FFFFFF;";
-    } else if(mouseover === card3) {
+    } else if(mouseover === card3 || mouseover === card3__h4 || mouseover === card3__h2 || mouseover === card3__img) {
         card1.style = "background-color: var(--secondary-color); color: #FFFFFF;";
         card2.style = "background-color: var(--secondary-color); color: #FFFFFF;";
         card3.style = "background-color: var(--primary-color); border: none;";
