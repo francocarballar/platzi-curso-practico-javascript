@@ -4,10 +4,154 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="./css/desktop.css" media="(min-width: 1024px")>
+    <link rel="shortcut icon" href="./assets/icons/cubo_rubik.png" type="image/x-icon">
     <title>Figuras geométricas | Curso Práctico de Javascript en Platzi</title> 
 </head>
 <body>
-    <h1>Figuras geométricas</h1>
-    <script type="text/javascript" src="./figuras.js"></script>
+    <header class="header">
+        <nav class="navbar">
+            <div>
+                <a href="./index.html">
+                    <img class="logo-js-challenge" src="assets/img/js-challenge-logo.png" alt="Logo de la escuela de JavaScript de Platzi">
+                </a>
+                <img class="logo-platzi" src="assets/img/platzi.webp" alt="Logotipo de la empresa Platzi">
+            </div>
+            <a class="user" href="https://www.linkedin.com/in/francocarballar/" target="_blank">@francocarballar</a>
+        </nav>
+    </header>
+    <main class="main">
+        <a class="home-btn" href="./index.html">HOME</a>
+        <header>
+            <h3>TRABAJO PRÁCTICO - PLATZI</h3>
+            <h1>Figuras Geométricas</h1>
+        </header>
+        <!-- CUADRADOS Y RECTANGULOS  -->
+        <section class="main-section">
+            <section  class="taller-card">
+                <img src="assets/icons/square.png" alt="Figura geométrica de un cubo" class="img-first">
+                <h2>Cuadrados</h2>
+                <form id="form-cuadrados">
+                    <label  for="inputCuadrado">Ingrese el <strong> Lado</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputCuadrado" min="1">
+                    <p class="error" id="error-cuadrado"></p>
+                    <button class="btn-form btn-form-first" type="button" onclick="calcularPerimetroCuadrado()">Calcular el perímetro</button>
+                    <button class="btn-form" type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+                </form>
+                <img src="assets/icons/cube.png" alt="Figura geométrica de un prisma rectángular">
+                <h2>Rectángulos</h2>
+                <form id="rectangulos">
+                    <label for="inputRectangulo1">Ingrese el <strong> Lado A</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputRectangulo1" min="1">
+                    <p class="error" id="error-rectangulo-L1"></p>
+                    <label for="inputRectangulo2">Ingrese el <strong> Lado B</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputRectangulo2" min="1"> 
+                    <p class="error" id="error-rectangulo-L2"></p>
+                    <button class="btn-form btn-form-first" type="button" onclick="calcularPerimetroRectangulo()">Calcular el perímetro</button>
+                    <button class="btn-form" type="button" onclick="calcularAreaRectangulo()">Calcular el área</button>
+                </form>
+            </section>
+            <!-- TRIÁNGULOS  -->
+            <section class="taller-card">
+                <img src="assets/icons/triangle.png" alt="Figura geométrica de un prisma triángular">
+                <h2>Triángulos</h2>
+                <form id="form-triangulos">
+                    <label for="inputTriangulo1">Ingrese <strong> Lado A</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputTriangulo1" min="1">
+                    <p id="error-triangulo-L1" class="error"></p>
+                    <label for="inputTriangulo2">Ingrese <strong> Lado B</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputTriangulo2" min="1">
+                    <p id="error-triangulo-L2" class="error"></p>
+                    <label for="inputBase">Ingrese <strong> Base</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputBase" min="1">
+                    <p id="error-triangulo-base" class="error"></p>
+                    <label for="inputAltura">Ingrese <strong> Altura</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputAltura" min="1">
+                    <p id="error-triangulo-altura" class="error"></p>
+                    <button class="btn-form btn-form-first" type="button" onclick="calcularPerimetroTriangulo();">Calcular el perímetro</button>
+                    <button class="btn-form" type="button" onclick="calcularAreaTriangulo();">calcular el área</button>
+                </form>
+            </section>
+            <!-- CIRCULOS  -->
+            <section class="taller-card">
+                <img src="assets/icons/circle.png" alt="Figura geométrica de una esfera">
+                <h2>Círculos</h2>
+                <form id="circulos">
+                    <label for="inputCirculo">Ingrese el <strong> Radio</strong> en cm:</label>
+                    <input type="number" name="lado" id="inputCirculo" min="1">
+                    <p class="error" id="error-circulo"></p>
+                    <button class="btn-form btn-form-first" type="button" onclick="calcularPerimetroCirculo();">Calcular el perímetro</button>
+                    <button class="btn-form" type="button" onclick="calcularAreaCirculo();">Calcular el área</button>
+                    <button class="btn-form" type="button" onclick="calcularDiametroCirculo();">Calcular el diámetro</button>
+                </form>
+            </section>
+        </section>
+        <!-- Nav Works  -->
+        <section class="nav-works">
+            <div class="card__item" id="card1" onclick="location.href='./taller-2.html'">
+                <img src="assets/icons/price.png" alt="">
+                <div>
+                    <h4>TALLER #2</h4>
+                    <h2>Porcentajes y descuentos</h2>
+                    <p>Calculo básicos para precios, descuentos y cupones de pago.</p>
+                </div>
+            </div>
+            <div class="card__item" id="card2" onclick="location.href='./taller-3.html'">
+                <img src="assets/icons/discount.png" alt="">
+                <div>
+                    <h4>TALLER #3</h4>
+                    <h2>Media, Moda y Mediana</h2>
+                    <p>Calculos básicos y avanzados.</p>
+                </div>
+            </div>
+            <div class="card__item" id="card3" onclick="location.href='./taller-4.html'">
+                <img src="assets/icons/dollar.png" alt="">
+                <div>
+                    <h4>TALLER #4</h4>
+                    <h2>Analisis Salarial</h2>
+                    <p>Calculo básicos para trabajar con Salarios (medianas y top 10%).</p>
+                </div>
+            </div>
+        </section>
+        <!-- Overlay Results  -->
+        <section class="overlay" id="overlay">
+            <div class="result" id="result">
+                <p>
+                    <span class="result-close" onclick="closeOverlay()">x</span>
+                </p>
+                <img id="resultIMG" alt="Imágen de el resultado del cálculo con la figura geométrica">
+                <h2 id="resultH2"></h2>
+                <h4 id="resultH4"></h4>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://github.com/francocarballar" target="_blank">
+                        <img src="./assets/icons/logo_github.svg" alt="Logotipo de la empresa GitHub">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/francocarballar" target="_blank">
+                        <img src="./assets/icons/logo_linkedin.svg" alt="Logotipo de la empresa LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/francocarballa" target="_blank">
+                        <img src="./assets/icons/logo_twitter.svg" alt="Logotipo de la empresa Twitter">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+    <script type="text/javascript" src="./js/figuras.js"></script>
 </body>
 </html>
